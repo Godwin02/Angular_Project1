@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>SI NO</th>
+                <th>NAME</th>
+                <th>PRICE</th>
+                <th>CATEGORY
+                    <select [(ngModel)]="selectedCategory" (change)="filter()">
+                        <option >SELECT</option>
+                        <option *ngFor="let items of categories" [value]="items">{{items}}</option>
+                    </select>
+                </th>
+                <th>STOCK</th>
+            </tr>
+        </thead>
+        <tbody *ngFor="let products of tempProducts;index as i" >
+            <tr [class.rows]="i%2==0">
+                <td>{{i+1}}</td>
+                <td>{{products.name}}</td>
+                <td>{{products.price}}</td>
+                <td>{{products.category}}</td>
+                <td>{{products.stock}}</td>
+            </tr>
+        </tbody>
+    </table>
+
+
+</body>
+
+</html>

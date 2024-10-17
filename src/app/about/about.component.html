@@ -1,0 +1,24 @@
+<table class="people">
+    <thead>
+        <tr>
+            <th>SI NO.</th>
+            <th>
+                NAME
+                <input type="search" name="name" id="name" (keypress)="search()" placeholder="Search Name" [(ngModel)]="name"> 
+                <!-- <button (click)="search()">></button> -->
+            </th>
+            <th>AGE</th>
+            <th>COUNTRY</th>
+            <th>STATUS <button [hidden]="filter_btn" (click)="fiter()" >Eligible</button><button [hidden]="no_filter_btn" (click)="nofilter()" >All</button></th>
+        </tr>
+    </thead>
+    <tbody *ngFor="let items of temppeople;index as i">
+        <tr>
+            <td>{{(4198+i)}}</td>
+            <td >{{items.name}}</td>
+            <td >{{items.age}}</td>
+            <td>{{items.country}}</td>
+            <td>{{items.age>30?'Eligible':'Ineligible'}}</td>
+        </tr>
+    </tbody>
+</table>

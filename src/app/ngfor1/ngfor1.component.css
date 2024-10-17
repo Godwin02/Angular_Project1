@@ -1,0 +1,11 @@
+table{
+    width: 800px;
+    text-align: center;
+    margin-left: 15%;
+}
+table th,td{
+    border: 1px solid rgb(36, 16, 16);
+}
+.rows{
+    background-color: rgb(206, 145, 145);
+}

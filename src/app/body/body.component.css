@@ -1,0 +1,22 @@
+.cards{
+    height: 600px;
+    width: 700px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url('https://www.aljazeera.com/wp-content/uploads/2024/07/2023-06-30T150002Z_2097180481_RC2RT1AN6BA8_RTRMADP_3_RELIGION-EID-PAKISTAN-1720607525.jpg?resize=770%2C513&quality=80');
+}
+.cards:hover + .details{
+    opacity: 1;
+    visibility: visible;
+}
+.places{
+    display: flex;
+    gap:30px;
+    justify-content: start;
+}
+.details{
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease; /* Adjust the duration and timing function as needed */    width: fit-content;
+    height: max-content;
+}

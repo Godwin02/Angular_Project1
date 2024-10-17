@@ -1,0 +1,42 @@
+.table_data{
+        text-align: center;
+        margin-left: 20%;
+margin-top: 20px;
+width: 700px;
+height: 500px;
+}
+.table_data th,td{
+    border: 1px solid;
+}
+.rows{
+    background-color: rgb(122, 83, 83);
+    color:rgb(255, 255, 255)
+}
+.container{
+    margin-top: 10px;
+    display: flex;
+    gap:25px;
+    flex-wrap: wrap;
+}
+.cards{
+    border-radius: 55px 0px;
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    height: fit-content;
+    align-items: center; 
+    padding: 2px; 
+    background-color: rgb(106, 177, 177);  
+}
+.cards img{
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+}
+.cards img:hover{
+    border-radius: 0%;
+    transition: all linear 0.7s;
+}
+.cards h1{
+    text-shadow:5px 2px 15px rgb(106, 177, 177);
+}

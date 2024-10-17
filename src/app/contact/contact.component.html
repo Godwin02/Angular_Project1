@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="form">
+        <div class="inputs" [hidden]="inputs">
+            <h1>Contact NIWI TRAVELS</h1>
+            <label for="text">Enter Subject Name</label>
+            <input type="text" name="text" [(ngModel)]="text">
+            <label for="number" >Enter Your Mark(Out of 100)</label>
+            <input type="number" name="number" [(ngModel)]="mark">
+            <button (click)="show()">Submit</button>
+        </div>
+       
+        <div class="box" [hidden]="hidden">
+            <h1>Progress Card</h1>
+            <label>Subject Name: {{text}}</label>
+            <label>Grdae:<span [style.color]="grade_sty">{{grade}}</span> </label>
+            <button class="btn btn-danger" (click)="reset()" >Reset</button>
+        </div>
+        <div *ngIf="grade==(('A PLUS') || ('A GRADE')) " class="congrats">
+               <h1>Congratulations <br>
+            For Your Achievement</h1> 
+        </div>
+    </div>
+    
+</body>
+</html>

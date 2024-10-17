@@ -1,0 +1,9 @@
+.people{
+    width: 600px;
+    text-align: center;
+    margin-left: 25%;
+    margin-top: 10px;
+}
+.people th, td{
+    border: 1px solid black;
+}
